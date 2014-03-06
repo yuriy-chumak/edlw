@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
-public class CommonActivity extends Activity {
+public class CommonActivity extends BaseActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +32,9 @@ public class CommonActivity extends Activity {
 						NotFoundActivity.class), 0);
 			}});
 		
-		((TextView)findViewById(R.id.E5)).setText(Integer.toString(Model.E5));
-		((TextView)findViewById(R.id.F5)).setText(
-				Integer.toString(Model.F5 / 60) + ":" +
+		set(R.id.E5, Model.E5);
+		set(R.id.F5,
+				Integer.toString(Model.F5 / 60 % 24) + ":" +
 				Integer.toString(Model.F5 % 60)
 		);
 		

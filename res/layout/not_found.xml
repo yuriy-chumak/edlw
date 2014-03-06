@@ -36,7 +36,7 @@
             android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@color/orange" >
+            android:background="@color/aqua" >
 
             <TextView
                 android:layout_width="fill_parent"
@@ -73,25 +73,22 @@
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:background="@color/yellow"
 				android:layout_weight="1" 
+                android:gravity="center"
                 android:text="сл. усл."
                 android:textAppearance="?android:attr/textAppearanceSmall" />
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:background="@color/yellow"
 				android:layout_weight="1" 
+                android:gravity="center"
                 android:text="сл. усл."
                 android:textAppearance="?android:attr/textAppearanceSmall" />
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:background="@color/yellow"
 				android:layout_weight="1" 
+                android:gravity="center"
                 android:text="сл. усл."
                 android:textAppearance="?android:attr/textAppearanceSmall" />
         </LinearLayout>
@@ -136,14 +133,6 @@
             android:background="@color/green"
             android:layout_weight="1" >
 
-            <TextView
-                android:id="@+id/G8"
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:textSize="40sp" 
-                android:textAppearance="?android:attr/textAppearanceLarge" />
             <TextView
                 android:id="@+id/K8"
                 android:layout_width="fill_parent"

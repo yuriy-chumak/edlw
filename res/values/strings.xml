@@ -8,5 +8,6 @@
     <string name="title_activity_common_">Общие</string>
     <string name="title_activity_found_">Очаг найден</string>
     <string name="title_activity_not_found_">Очаг не найден</string>
+    <string name="title_activity_base">base</string>
 
 </resources>

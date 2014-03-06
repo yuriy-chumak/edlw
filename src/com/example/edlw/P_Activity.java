@@ -12,7 +12,7 @@ import android.view.View.OnClickListener;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class P_Activity extends Activity {
+public class P_Activity extends BaseActivity {
 /*	class functor {
 		functor(int id, )
 	}*/
@@ -52,35 +52,35 @@ public class P_Activity extends Activity {
 			@Override public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {}
 			@Override public void afterTextChanged(Editable value) {
 				Model.setB5(get(value));
-				((TextView)findViewById(R.id.D5)).setText(Integer.toString(Model.D5));
+				set(R.id.D5, Model.D5);
 			}});
 		((EditText)findViewById(R.id.B6)).addTextChangedListener(new TextWatcher() {
 			@Override public void beforeTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {}
 			@Override public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {}
 			@Override public void afterTextChanged(Editable value) {
 				Model.setB6(get(value));
-				((TextView)findViewById(R.id.D6)).setText(Integer.toString(Model.D6));
+				set(R.id.D6, Model.D6);
 			}});
 		((EditText)findViewById(R.id.B7)).addTextChangedListener(new TextWatcher() {
 			@Override public void beforeTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {}
 			@Override public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {}
 			@Override public void afterTextChanged(Editable value) {
 				Model.setB7(get(value));
-				((TextView)findViewById(R.id.D7)).setText(Integer.toString(Model.D7));
+				set(R.id.D7, Model.D7);
 			}});
 		((EditText)findViewById(R.id.B8)).addTextChangedListener(new TextWatcher() {
 			@Override public void beforeTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {}
 			@Override public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {}
 			@Override public void afterTextChanged(Editable value) {
 				Model.setB8(get(value));
-				((TextView)findViewById(R.id.D8)).setText(Integer.toString(Model.D8));
+				set(R.id.D8, Model.D8);
 			}});
 		((EditText)findViewById(R.id.B9)).addTextChangedListener(new TextWatcher() {
 			@Override public void beforeTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {}
 			@Override public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {}
 			@Override public void afterTextChanged(Editable value) {
 				Model.setB9(get(value));
-				((TextView)findViewById(R.id.D9)).setText(Integer.toString(Model.D9));
+				set(R.id.D9, Model.D9);
 			}});
 		
 		// Рпо прибытии к месту работы
@@ -89,52 +89,35 @@ public class P_Activity extends Activity {
 			@Override public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {}
 			@Override public void afterTextChanged(Editable value) {
 				Model.setC5(get(value));
-				((TextView)findViewById(R.id.D5)).setText(Integer.toString(Model.D5));
+				set(R.id.D5, Model.D5);
 			}});
 		((EditText)findViewById(R.id.C6)).addTextChangedListener(new TextWatcher() {
 			@Override public void beforeTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {}
 			@Override public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {}
 			@Override public void afterTextChanged(Editable value) {
 				Model.setC6(get(value));
-				((TextView)findViewById(R.id.D6)).setText(Integer.toString(Model.D6));
+				set(R.id.D6, Model.D6);
 			}});
 		((EditText)findViewById(R.id.C7)).addTextChangedListener(new TextWatcher() {
 			@Override public void beforeTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {}
 			@Override public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {}
 			@Override public void afterTextChanged(Editable value) {
 				Model.setC7(get(value));
-				((TextView)findViewById(R.id.D7)).setText(Integer.toString(Model.D7));
+				set(R.id.D7, Model.D7);
 			}});
 		((EditText)findViewById(R.id.C8)).addTextChangedListener(new TextWatcher() {
 			@Override public void beforeTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {}
 			@Override public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {}
 			@Override public void afterTextChanged(Editable value) {
 				Model.setC8(get(value));
-				((TextView)findViewById(R.id.D8)).setText(Integer.toString(Model.D8));
+				set(R.id.D8, Model.D8);
 			}});
 		((EditText)findViewById(R.id.C9)).addTextChangedListener(new TextWatcher() {
 			@Override public void beforeTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {}
 			@Override public void onTextChanged(CharSequence arg0, int arg1, int arg2, int arg3) {}
 			@Override public void afterTextChanged(Editable value) {
 				Model.setC9(get(value));
-				((TextView)findViewById(R.id.D9)).setText(Integer.toString(Model.D9));
+				set(R.id.D9, Model.D9);
 			}});
-	}
-	
-	private int get(int id)
-	{
-		try {
-			return Integer.parseInt(((EditText)findViewById(id)).getText().toString());
-		}
-		catch (Exception ex) {}
-		return 0;
-	}
-	private int get(Editable value)
-	{
-		try {
-			return Integer.parseInt(value.toString());
-		}
-		catch (Exception ex) {}
-		return 0;
 	}
 }

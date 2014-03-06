@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Рк. вых."
+                android:text="Р к. вых."
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <TextView
@@ -51,7 +51,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Траб. у очага"
+                android:text="Т раб. у очага"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
             <TextView
@@ -59,7 +59,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Tдо подачи команды на возвращение"
+                android:text="T до подачи команды на возвращение"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
             
             <TextView
@@ -67,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="Tподачи команды на возвращение"
+                android:text="T подачи команды на возвращение"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
             
         </LinearLayout>

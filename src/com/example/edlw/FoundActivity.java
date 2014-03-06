@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
 
-public class FoundActivity extends Activity {
+public class FoundActivity extends BaseActivity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -22,21 +22,20 @@ public class FoundActivity extends Activity {
 				finish();
 			}});
 		
-		((TextView)findViewById(R.id.G5)).setText(Integer.toString(Model.G5));
-		((TextView)findViewById(R.id.H5)).setText(Integer.toString(Model.H5));
-		((TextView)findViewById(R.id.I5)).setText(Integer.toString(Model.I5));
-		((TextView)findViewById(R.id.J5)).setText(
-				Integer.toString(Model.J5 / 60) + ":" +
+		set(R.id.G5, Model.G5);
+		set(R.id.H5, Model.H5);
+		set(R.id.I5, Model.I5);
+		set(R.id.J5, 
+				Integer.toString(Model.J5 / 60 % 24) + ":" +
 				Integer.toString(Model.J5 % 60)
 		);
 
-		((TextView)findViewById(R.id.G8)).setText(Integer.toString(Model.G8));
-		((TextView)findViewById(R.id.H8)).setText(Integer.toString(Model.H8));
-		((TextView)findViewById(R.id.I8)).setText(Integer.toString(Model.I8));
-		((TextView)findViewById(R.id.J8)).setText(
-				Integer.toString(Model.J8 / 60) + ":" +
+		set(R.id.G8, Model.G8);
+		set(R.id.H8, Model.H8);
+		set(R.id.I8, Model.I8);
+		set(R.id.J8,
+				Integer.toString(Model.J8 / 60 % 24) + ":" +
 				Integer.toString(Model.J8 % 60)
 		);
-		
 	}
 }

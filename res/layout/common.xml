@@ -64,15 +64,15 @@
                 android:id="@+id/E5"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:gravity="center"
                 android:layout_weight="1"
+                android:gravity="center"
                 android:textSize="40sp" />
 
             <TextView
                 android:id="@+id/F5"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_weight="2"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:textSize="40sp" />
         </LinearLayout>

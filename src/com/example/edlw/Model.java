@@ -112,8 +112,3 @@ public class Model {
 		return a > b ? a : b;
 	}
 }
-class Time
-{
-	public static int H;
-	public static int M;
-}
