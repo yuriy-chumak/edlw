@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="horizontal"
+	android:background="@color/silver"
+>
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+		android:paddingBottom="@dimen/activity_vertical_margin"
+		android:paddingLeft="@dimen/activity_horizontal_margin"
+		android:paddingRight="@dimen/activity_horizontal_margin"
+		android:paddingTop="@dimen/activity_vertical_margin"
+    >
+	    <TextView
+	        android:id="@+id/textView1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:text="Время включения:"
+	        android:textAppearance="?android:attr/textAppearanceLarge" />
+	
+	    <TimePicker
+	        android:id="@+id/timePicker"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentLeft="true"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="71dp" />
+	
+	    <Button
+	        android:id="@+id/now"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/timePicker"
+	        android:layout_toRightOf="@+id/textView1"
+	        android:text="Текущее время" />
+	    
+    </RelativeLayout>
+    
+    <TextView
+        android:id="@+id/to_p"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+		android:background="@color/yellow"
+        android:layout_weight="6"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="К вводу данных"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+</LinearLayout>
