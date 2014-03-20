@@ -1,3 +1,5 @@
+(require 'android)
+
 (+ 1 2)
 (setq now (find-view-by-id 2131296272))
 
