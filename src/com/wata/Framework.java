@@ -18,11 +18,15 @@ import android.app.Activity;
 import android.util.Log;
 
 public class Framework {
-	static Lisp lisp = new Lisp();
-	static LispParser cli = new LispParser(lisp, new InputStreamReader(System.in));
+//	static LispParser cli = new LispParser(lisp, new InputStreamReader(System.in));
 	
+	Lisp lisp = new Lisp();
+	Thread processor = null;
 	public Framework(final Activity activity)
 	{
+		Log.i("lisp", lisp.intern("THIS", new LispActivity("THIS", activity)).toString());
+		
+		processor =
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
@@ -35,7 +39,6 @@ public class Framework {
 //				List<String> errors = new ArrayList<String>();
 				
 //				Lisp lisp = new Lisp(); 
-				Log.i("lisp", lisp.intern("THIS", new LispActivity("THIS", activity)).toString());
 				
 				LispParser cli = new LispParser(lisp, resourceReader);
 				while (true) {
@@ -52,8 +55,8 @@ public class Framework {
 						LispValue r = lisp.eval(s);
 						Log.i("lisp", r.toString());
 						
-						if ((r instanceof StandardLispConstant && !r.toString().equals("T"))
-						 || (r instanceof StandardLispNIL)
+						if ((r instanceof StandardLispNIL) ||
+							(r instanceof StandardLispConstant && r != LispValue.T)
 						) {
 							Log.e("lisp", "    FAILED " + s.toString() + " -> " + r.toString());
 						}
@@ -70,6 +73,15 @@ public class Framework {
 				else
 					System.out.println("Ok");*/
 			}
-		}).start();
+		});
+	}
+	
+	public void onStart()
+	{
+		processor.start();
+	}
+	public void onStop()
+	{
+		//processor.pause();
 	}
 }

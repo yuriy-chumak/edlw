@@ -58,6 +58,19 @@ public class MainActivity extends Activity {
 		
 		framework = new Framework(this);
 	}
+	
+	@Override
+	public void onStart()
+	{
+		super.onStart();
+		framework.onStart();
+	}
+	@Override
+	public void onStop()
+	{
+		framework.onStop();
+		super.onStop();
+	}
 
 /*	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

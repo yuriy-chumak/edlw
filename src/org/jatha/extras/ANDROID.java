@@ -1,5 +1,7 @@
 package org.jatha.extras;
 
+import java.lang.reflect.Field;
+
 import org.jatha.Registrar;
 import org.jatha.compile.LispCompiler;
 import org.jatha.compile.LispPrimitive1;
@@ -11,6 +13,7 @@ import org.jatha.dynatype.StandardLispSymbol;
 import org.jatha.exception.CompilerException;
 import org.jatha.exception.LispValueNotANumberException;
 import org.jatha.exception.LispValueNotASymbolException;
+
 import com.wata.framework.type.LispActivity;
 
 import android.app.Activity;
@@ -42,8 +45,27 @@ public class ANDROID implements Registrar
 			protected LispValue Execute(LispValue arg) throws CompilerException {
 				if (arg instanceof LispNumber) {
 					int id = (int)((LispNumber)arg).getLongValue();
-					return new LispView("view-" + (LispNumber)arg, activity.findViewById(id));
+					return new LispView("view-" + arg.toString(), activity.findViewById(id));
 				}
+				if (arg instanceof LispSymbol) {
+					int value = 0;
+					try {
+						String name = arg.toString().toLowerCase();
+						Field id = com.example.edlw.R.id.class.getField(name);
+						Integer x = (Integer)id.get(Integer.class);
+						value = x;
+					} catch (SecurityException e) {
+						e.printStackTrace();
+					} catch (NoSuchFieldException e) {
+						e.printStackTrace();
+					} catch (IllegalArgumentException e) {
+						e.printStackTrace();
+					} catch (IllegalAccessException e) {
+						e.printStackTrace();
+					}
+					
+					return new LispView("view-" + arg.toString(), activity.findViewById(value));
+ 				}
 				throw new LispValueNotANumberException(arg);
 			}
 		});

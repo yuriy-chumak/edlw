@@ -1,7 +1,7 @@
 (require 'android)
 
 (+ 1 2)
-(setq now (find-view-by-id 2131296272))
+(setq now (find-view-by-id 'now))
 
 (setq green 65280)
 (setq red 16711680)
