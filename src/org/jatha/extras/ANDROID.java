@@ -2,8 +2,8 @@ package org.jatha.extras;
 
 import java.lang.reflect.Field;
 
-import org.jatha.Registrar;
 import org.jatha.compile.LispCompiler;
+import org.jatha.compile.LispExtension;
 import org.jatha.compile.LispPrimitive1;
 import org.jatha.compile.LispPrimitive2;
 import org.jatha.dynatype.LispNumber;
@@ -19,7 +19,7 @@ import com.wata.framework.type.LispActivity;
 import android.app.Activity;
 import android.view.View;
 
-public class ANDROID implements Registrar
+public class ANDROID implements LispExtension
 {
 	@Override
 	public void Register(LispCompiler lisp) {

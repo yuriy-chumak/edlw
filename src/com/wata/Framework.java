@@ -3,6 +3,8 @@ package com.wata;
 import java.io.EOFException;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.jatha.Lisp;
 import org.jatha.dynatype.LispValue;
